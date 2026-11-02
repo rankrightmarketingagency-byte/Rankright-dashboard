@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f9f7" />
+  <meta name="description" content="Rank Right team member workspace." />
+  <title>Team workspace · Rank Right</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="dashboard-file.js" defer></script>
+  <script>
+    window.setTimeout(function () {
+      const state = document.querySelector('.loading-state');
+      if (!state) return;
+      state.className = 'connection-state-card';
+      state.innerHTML = '<span class="empty-illustration">!</span><h1>Dashboard could not start</h1><p>The dashboard script did not finish loading. Reopen this page from the dashboard folder or start the local preview, then try again.</p>';
+    }, 15000);
+  </script>
+</head>
+<body data-dashboard-role="team_member">
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="team.html"><span class="brand-mark"><i></i><i></i><i></i><b>↗</b></span><span class="brand-copy"><strong>RANK <em>RIGHT</em></strong><small>TEAM WORKSPACE</small></span></a>
+      <div class="workspace-select"><span class="workspace-avatar">RR</span><span><strong>Rank Right</strong><small>Team member</small></span><span class="workspace-chevron">⌄</span></div>
+      <p class="nav-caption">MY WORK</p>
+      <nav class="nav-list" id="primary-nav" aria-label="Team member navigation">
+        <button class="nav-item is-active" data-view="overview"><span>▦</span>My overview</button>
+        <button class="nav-item" data-view="projects"><span>▤</span>Assigned projects</button>
+        <button class="nav-item" data-view="services"><span>◈</span>My services</button>
+        <button class="nav-item" data-view="tasks"><span>☷</span>My tasks</button>
+        <button class="nav-item" data-view="submissions"><span>↑</span>Submit work</button>
+        <button class="nav-item" data-view="feedback"><span>◉</span>Review feedback</button>
+        <button class="nav-item" data-view="calendar"><span>▦</span>My calendar</button>
+        <button class="nav-item" data-view="notifications"><span>♧</span>Notifications</button>
+        <button class="nav-item" data-view="templates"><span>▧</span>Available templates</button>
+        <button class="nav-item" data-view="activity"><span>⌁</span>My activity</button>
+        <button class="nav-item" data-view="reports"><span>⌁</span>My reports</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <a class="nav-item nav-link" href="owner.html"><span>⇄</span>Owner workspace</a>
+        <button class="nav-item" data-view="settings"><span>⚙</span>Settings</button>
+        <div class="sidebar-user"><span class="user-avatar" id="user-avatar">RR</span><span><strong id="user-name">Loading account…</strong><small>Verified team member</small></span><button class="sign-out-button" type="button" data-sign-out><span aria-hidden="true">↗</span><span>Log out</span></button></div>
+      </div>
+    </aside>
+    <div class="main-column">
+      <header class="topbar">
+        <div class="topbar-left"><button class="icon-button menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button><div class="breadcrumbs"><span>Rank Right</span><b>/</b><strong id="breadcrumb-current">My overview</strong></div></div>
+        <div class="topbar-actions"><label class="global-search"><span>⌕</span><input id="workspace-search" type="search" placeholder="Search my work" aria-label="Search assigned workspace records" /><kbd>Ctrl K</kbd></label><span class="role-badge role-team">TEAM MEMBER</span><button class="icon-button" data-view="notifications" aria-label="Notifications">♧</button><span class="top-avatar" id="top-avatar">RR</span></div>
+      </header>
+      <main class="main-content" id="main-content" tabindex="-1"><section class="loading-state">Checking your team access…</section></main>
+      <footer class="app-footer"><span>Rank Right Team Workspace <i>·</i> Assigned work only</span><span id="connection-state">Connecting securely…</span></footer>
+    </div>
+  </div>
+  <div class="mobile-scrim" id="mobile-scrim"></div>
+  <dialog class="app-dialog" id="app-dialog"><form method="dialog" class="dialog-form"><div class="dialog-head"><div><p class="eyebrow">WORKSPACE ACTION</p><h2 id="dialog-title"></h2></div><button class="icon-button" aria-label="Close">×</button></div><div id="dialog-body"></div><div class="dialog-actions"><button class="button button-secondary" value="cancel">Cancel</button><button class="button button-primary" id="dialog-submit" value="default">Save changes</button></div></form></dialog>
+</body>
+</html>

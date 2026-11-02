@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f9f7" />
+  <meta name="description" content="Secure Rank Right workspace sign in." />
+  <title>Team sign in · Rank Right Workspace</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="dashboard-file.js" defer></script>
+</head>
+<body class="auth-page" data-auth-flow="team-legacy">
+  <main class="auth-layout">
+    <section class="auth-card">
+      <a class="brand brand-auth" href="index.html" aria-label="Rank Right workspace home">
+        <span class="brand-mark"><i></i><i></i><i></i><b>↗</b></span>
+        <span class="brand-copy"><strong>RANK <em>RIGHT</em></strong><small>AGENCY WORKSPACE</small></span>
+      </a>
+      <div class="auth-intro">
+        <p class="eyebrow"><span class="eyebrow-dot"></span>SECURE TEAM WORKSPACE</p>
+        <h1>Good work moves forward <span>together.</span></h1>
+        <p>Sign in to continue to the workspace assigned to your Rank Right account.</p>
+      </div>
+      <form id="auth-form" class="auth-form">
+        <label id="name-field">Name<input name="full_name" autocomplete="name" placeholder="Your name" maxlength="120" /></label>
+        <label>Work email<input name="email" type="email" placeholder="name@company.com" autocomplete="off" required maxlength="320" /></label>
+        <label id="password-field">Password<span class="password-control"><input name="password" type="password" autocomplete="current-password" required minlength="8" /><button class="password-visibility" id="password-visibility" type="button" aria-pressed="false">Show</button></span></label>
+        <input class="auth-honeypot" name="company_url" tabindex="-1" autocomplete="off" aria-hidden="true" /><button class="button button-primary button-wide" id="auth-submit" type="submit">Sign in <span>→</span></button>
+      </form>
+      <form id="recovery-form" class="auth-form" hidden>
+        <label>New password<span class="password-control"><input id="new-password" type="password" autocomplete="new-password" required minlength="8" /><button class="password-visibility" id="new-password-visibility" type="button" aria-pressed="false">Show</button></span></label>
+        <label>Confirm new password<span class="password-control"><input id="confirm-password" type="password" autocomplete="new-password" required minlength="8" /><button class="password-visibility" id="confirm-password-visibility" type="button" aria-pressed="false">Show</button></span></label>
+        <button class="button button-primary button-wide" id="recovery-submit" type="submit">Update password <span>→</span></button>
+      </form>
+      <p class="auth-status" id="auth-status" role="status" aria-live="polite"></p>
+      <button class="text-button auth-mode-toggle" id="auth-mode-toggle" type="button">Request team access</button>
+      <div class="auth-note"><span class="connection-dot is-online"></span><span>Owner and team access is assigned by Rank Right. Your role is checked securely after sign in.</span></div>
+      <p class="auth-foot">Existing project · <code>bbcmzzjicuhlmulvcpgu</code></p>
+      <p class="auth-foot"><a href="index.html">Owner sign in</a></p>
+    </section>
+    <aside class="auth-aside" aria-label="Workspace capabilities">
+      <div class="aside-orbit aside-orbit-one"></div><div class="aside-orbit aside-orbit-two"></div>
+      <div class="aside-copy">
+        <p class="eyebrow">RANK RIGHT / WORKSPACE</p>
+        <h2>Clear priorities.<br /><strong>Better delivery.</strong></h2>
+        <p>Projects, reviews, deadlines, and client work in one secure place.</p>
+        <div class="aside-pills"><span>Projects</span><span>Reviews</span><span>Team</span><span>Growth</span></div>
+      </div>
+      <div class="aside-footer"><span class="brand-mark brand-mark-small"><i></i><i></i><i></i><b>↗</b></span><span>YOUR GROWTH. OUR STRATEGY.</span></div>
+    </aside>
+  </main>
+</body>
+</html>

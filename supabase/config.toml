@@ -1,0 +1,17 @@
+[functions.team-access-requests]
+verify_jwt = true
+
+[functions.team-access-intake]
+verify_jwt = false
+
+[functions.owner-delete-enquiry]
+verify_jwt = true
+
+[functions.workspace-delete-record]
+verify_jwt = true
+
+[functions.workspace-account-settings]
+verify_jwt = true
+
+[functions.workspace-team-summary]
+verify_jwt = true
