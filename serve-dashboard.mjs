@@ -64,6 +64,6 @@ const server = createServer((request, response) => {
 });
 
 server.listen(port, host, () => {
-  console.log('Rank Right dashboard is available at http://' + host + ':' + port + '/');
+  console.log('Rank Right dashboard local preview server started on port ' + port + '.');
   console.log('Press Ctrl+C to stop the local preview.');
 });

@@ -4,9 +4,9 @@ This standalone dashboard lives separately from the Rank Right website. Owner an
 
 ## Open the dashboard
 
-1. Run `start-dashboard.cmd`, or run `node serve-dashboard.mjs` from this folder.
-2. Open `http://127.0.0.1:4174/` for sign-in.
-3. Owner page: `http://127.0.0.1:4174/owner.html`. Team page: `http://127.0.0.1:4174/team.html`.
+1. Open the sign-in page: `file:///C:/Users/Intel/Documents/Codex/2026-11-01/do/outputs/rank-right-dashboard/index.html`.
+2. Owner page: `file:///C:/Users/Intel/Documents/Codex/2026-11-01/do/outputs/rank-right-dashboard/owner.html`. Team page: `file:///C:/Users/Intel/Documents/Codex/2026-11-01/do/outputs/rank-right-dashboard/team.html`.
+3. If you prefer a local preview server, run `start-dashboard.cmd` from this folder.
 
 Use the local HTTP preview for sign-in so the browser shares the auth session between pages. The static JavaScript bundle also supports direct file previews. After changing `config.js`, `supabase.js`, `auth.js`, or `portal.js`, rebuild the bundle with `node build-file-dashboard.mjs`.
 
@@ -42,4 +42,3 @@ Personal overview, assigned projects, assigned services, tasks and progress upda
 - The frontend uses only the public publishable key; Row Level Security is the database authorization boundary. Never place a service-role or secret key in this folder.
 
 The existing website's contact forms continue using their own shared form code. Do not copy dashboard files over the website.
-
